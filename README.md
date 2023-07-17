@@ -1,29 +1,12 @@
 
-# Appointment scheduler
+# Appointment Scheduler
 
 >This is a Spring Boot Web Application to manage and schedule appointments between providers and customers. It has many features such as automatic invoicing, email notifications, appointments cancelation, providers individual working plans with brakes etc.
 
 
-<a href="https://github.com/slabiak/slabiak.github.io/blob/master/images/appointmentscheduler/calendar.png?raw=true"><img src="https://github.com/slabiak/slabiak.github.io/blob/master/images/appointmentscheduler/calendar.png?raw=true" width="600"></a>
-
-You can use the following credentials with live demo:
-
-| Account type | Username | Password 
-| --- | --- | --- |
-| `admin` | admin | qwerty123 |
-| `provider` | provider |qwerty123 |
-| `corporate customer` | customer_c |qwerty123 |
-| `retail customer` | customer_r |qwerty123 |
-
 ## Steps to Setup
 
-**1. Clone the application**
-
-```bash
-git clone https://github.com/slabiak/AppointmentScheduler.git
-```
-
-**2. Create MySQL database**
+**Create MySQL database**
 
 ```bash
 create database appointmentscheduler
@@ -31,14 +14,14 @@ create database appointmentscheduler
 
 - After that run MySQL script to create tables `src/main/resources/appointmentscheduler.sql`
 
-**3. Configure enviroment variables**
+**Configure enviroment variables**
 
 + open `src/main/resources/application.properties`
 + set env variables for JDBC `dbURL`, `dbUsername`, `dbPassword`
 + set env variables for mail server  `mailUsername`, `mailPassword`
 + set jwtSecret, encoded with Base64 `jwtSecret`
 
-**4. Run the app using maven**
+**Run the app using maven**
 
 ```bash
 mvn spring-boot:run
@@ -46,7 +29,7 @@ mvn spring-boot:run
 
 The app will start running at <http://localhost:8080>
 
-**5. Login to admin account**
+**Login to admin account**
 
 + username: `admin`
 + password: `qwerty123`
